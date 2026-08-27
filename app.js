@@ -4,8 +4,12 @@
   /* ---------- Theme toggle ---------- */
   var root = document.documentElement;
   var toggle = document.querySelector('[data-theme-toggle]');
+  var storedTheme = null;
+  try {
+    storedTheme = window.localStorage.getItem('inshelp-theme');
+  } catch (e) {}
   var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var theme = prefersDark ? 'dark' : 'light';
+  var theme = storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : prefersDark ? 'dark' : 'light';
   root.setAttribute('data-theme', theme);
 
   function paintToggle() {
@@ -21,6 +25,9 @@
     toggle.addEventListener('click', function () {
       theme = theme === 'dark' ? 'light' : 'dark';
       root.setAttribute('data-theme', theme);
+      try {
+        window.localStorage.setItem('inshelp-theme', theme);
+      } catch (e) {}
       paintToggle();
     });
   }

@@ -443,6 +443,15 @@ h3.card-title {
   .nav-toggle {
     display: inline-flex;
   }
+  .brand-word span {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-actions {
+    gap: var(--space-1);
+  }
 }
 
 /* ==========================================================================
