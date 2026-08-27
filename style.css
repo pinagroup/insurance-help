@@ -915,6 +915,25 @@ h3.card-title {
   margin-top: var(--space-1);
 }
 
+/* Reassurance statement */
+.reassurance {
+  padding-block: var(--space-12);
+  text-align: center;
+  background: var(--color-surface-2);
+}
+.reassurance-text {
+  max-width: 42rem;
+  margin-inline: auto;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  line-height: 1.35;
+  color: var(--color-text);
+}
+.reassurance-text em {
+  color: var(--color-primary-active);
+  font-style: italic;
+}
+
 /* CTA banner */
 .cta-banner {
   position: relative;
