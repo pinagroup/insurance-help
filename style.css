@@ -829,6 +829,49 @@ h3.card-title {
   font-weight: 700;
 }
 
+/* County coverage */
+.county-coverage {
+  margin-top: var(--space-16);
+  padding-top: var(--space-12);
+  border-top: 1px solid var(--color-border);
+}
+.county-coverage-title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-6);
+}
+.county-groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+.county-group h4 {
+  font-size: var(--text-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary-active);
+  margin-bottom: var(--space-3);
+}
+.county-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+}
+.county-seat {
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+}
+@media (max-width: 860px) {
+  .county-groups {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
 /* FAQ */
 .faq {
   display: flex;
